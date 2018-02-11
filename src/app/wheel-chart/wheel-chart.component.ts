@@ -22,7 +22,7 @@ export class WheelChartComponent implements OnInit {
     "9": "Career"
   };
 
-  circleData;
+  wheelData;
 
   // TODO: move to template after devextreme-angular update
   onChartInit = function(e) {
@@ -51,6 +51,6 @@ export class WheelChartComponent implements OnInit {
       return result;
     };
 
-    that.circleData = mapData(that.data)
+    that.wheelData = mapData(that.data)
   }
 }

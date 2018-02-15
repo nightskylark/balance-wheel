@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-wheel-chart',
@@ -9,20 +10,8 @@ export class WheelChartComponent implements OnInit {
 
   @Input('data') data: object;
 
-  // TODO: Move to db
-  names = {
-    "1": "Health",
-    "2": "Family",
-    "3": "Recreation",
-    "4": "Workspace",
-    "5": "Personal growth",
-    "6": "Finance",
-    "7": "Romance",
-    "8": "Friends",
-    "9": "Career"
-  };
-
   wheelData;
+  getCategory;
 
   // TODO: move to template after devextreme-angular update
   onChartInit = function(e) {
@@ -30,8 +19,8 @@ export class WheelChartComponent implements OnInit {
       "barGroupPadding": 0
     });
   };
-  
-  constructor() {
+
+  constructor(private categoryService: CategoryService) {
   }
 
   ngOnInit() {
@@ -43,7 +32,7 @@ export class WheelChartComponent implements OnInit {
       var result = []
       for(var index in data) {
         result.push({
-          arg: that.names[index],
+          arg: index,
           val: data[index]
         });
       }
@@ -51,6 +40,11 @@ export class WheelChartComponent implements OnInit {
       return result;
     };
 
-    that.wheelData = mapData(that.data)
+    this.categoryService.categories.subscribe((categories) => {
+      that.wheelData = mapData(that.data);
+      that.getCategory = function(argument) {
+        return categories[argument.value].name;
+      };
+    });
   }
 }

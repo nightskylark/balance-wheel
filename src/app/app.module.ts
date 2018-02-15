@@ -10,6 +10,7 @@ import { WheelListComponent } from './wheel-list/wheel-list.component';
 import { WheelChartComponent } from './wheel-chart/wheel-chart.component';
 
 import { DxPolarChartModule } from 'devextreme-angular';
+import { CategoryService } from './category.service'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { DxPolarChartModule } from 'devextreme-angular';
     AngularFireDatabaseModule,
     DxPolarChartModule,
   ],
-  providers: [],
+  providers: [
+    CategoryService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

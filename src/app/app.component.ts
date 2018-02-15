@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +6,7 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  wheelsLog: Observable<any[]>;
-  
-  constructor(db: AngularFireDatabase) {
-    this.wheelsLog = db.list<any>('checkPoints').valueChanges();
-  }
+
+  constructor() { }
+
 }

@@ -1,5 +1,5 @@
 <ul>
-  <li *ngFor="let wheel of wheelData | async">
-    <app-wheel-chart [data]="wheel"></app-wheel-chart>
+  <li *ngFor="let checkpoint of checkpoints | async">
+    <app-wheel-chart [data]="checkpoint"></app-wheel-chart>
   </li>
 </ul>

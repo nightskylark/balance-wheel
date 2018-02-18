@@ -14,3 +14,12 @@ ul {
     margin: 0 10px;
     padding: 0;
 }
+
+.add-checkpoint-icon {
+    font-weight: 300;
+    font-size: 100px;
+    color: #777;
+    display: block;
+    padding: 170px;
+    text-decoration: none;
+}

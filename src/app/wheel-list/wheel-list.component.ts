@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CheckpointService } from '../checkpoint.service';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-wheel-list',
@@ -9,10 +10,12 @@ import { CheckpointService } from '../checkpoint.service';
 export class WheelListComponent implements OnInit {
   
   checkpoints;
+  categories;
 
-  constructor(private checkpointService: CheckpointService) {
+  constructor(private checkpointService: CheckpointService, private categoryService: CategoryService) {
 
     this.checkpoints = this.checkpointService.checkpoints;
+    this.categories = this.categoryService.categories;
 
   }
 

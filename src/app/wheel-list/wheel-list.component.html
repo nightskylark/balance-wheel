@@ -1,5 +1,8 @@
 <ul>
+  <li>
+    <a routerLink="/checkpoint/new" class="dx-icon-plus add-checkpoint-icon" alt="Add new checkpoint"></a>
+  </li>
   <li *ngFor="let checkpoint of checkpoints | async">
-    <app-wheel-chart [data]="checkpoint"></app-wheel-chart>
+    <app-wheel-chart [data]="checkpoint" [categories]="categories | async"></app-wheel-chart>
   </li>
 </ul>

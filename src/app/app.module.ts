@@ -11,19 +11,23 @@ import { WheelChartComponent } from './wheel-chart/wheel-chart.component';
 
 import { DxPolarChartModule } from 'devextreme-angular';
 import { CategoryService } from './category.service';
-import { CheckpointService } from './checkpoint.service'
+import { CheckpointService } from './checkpoint.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { CheckpointEditorComponent } from './checkpoint-editor/checkpoint-editor.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     WheelListComponent,
-    WheelChartComponent
+    WheelChartComponent,
+    CheckpointEditorComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     DxPolarChartModule,
+    AppRoutingModule,
   ],
   providers: [
     CategoryService,

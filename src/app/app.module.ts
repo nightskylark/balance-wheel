@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { WheelListComponent } from './wheel-list/wheel-list.component';
 import { WheelChartComponent } from './wheel-chart/wheel-chart.component';
 
-import { DxPolarChartModule } from 'devextreme-angular';
+import { DxPolarChartModule, DxRadioGroupModule, DxButtonModule } from 'devextreme-angular';
 import { CategoryService } from './category.service';
 import { CheckpointService } from './checkpoint.service';
 import { AppRoutingModule } from './/app-routing.module';
@@ -27,6 +27,8 @@ import { CheckpointEditorComponent } from './checkpoint-editor/checkpoint-editor
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     DxPolarChartModule,
+    DxRadioGroupModule,
+    DxButtonModule,
     AppRoutingModule,
   ],
   providers: [

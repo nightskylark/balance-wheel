@@ -1,8 +1,9 @@
+<h2>History</h2>
 <ul>
-  <li>
+  <li class="material-card">
     <a routerLink="/checkpoint/new" class="dx-icon-plus add-checkpoint-icon" alt="Add new checkpoint"></a>
   </li>
-  <li *ngFor="let checkpoint of checkpoints | async">
+  <li class="material-card" *ngFor="let checkpoint of checkpoints | async">
     <app-wheel-chart [data]="checkpoint" [categories]="categories | async"></app-wheel-chart>
   </li>
 </ul>

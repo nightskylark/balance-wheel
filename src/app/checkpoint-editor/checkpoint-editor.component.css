@@ -1,0 +1,22 @@
+.category-card {
+    margin: 25px;
+    padding: 25px;
+}
+
+.category-icon {
+    width: 50px;
+    float: left;
+    font-size: 50px;
+    margin-right: 25px;
+}
+
+.floating-button {
+    color: #fff;
+    background-color: #00BCD4;
+    border-radius: 50%;
+    padding: 5px;
+    position: absolute;
+    right: 50px;
+    top: 25px;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+}

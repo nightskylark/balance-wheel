@@ -1,3 +1,19 @@
-<p>
-  checkpoint-editor works!
-</p>
+<dx-button class="floating-button"
+  icon="save">
+</dx-button>
+<h2>New checkpoint</h2>
+<ul>
+  <li *ngFor="let category of categories | async">
+    <div *ngIf="category" class="material-card category-card" [style.border-left]="'10px solid ' + category.color">
+      <div
+        [class]="'category-icon dx-icon-' + (category.icon || 'tags')"
+        [style.color]="category.color">
+      </div>
+      <p>{{category && category.name}}</p>
+      <dx-radio-group
+        [items]="[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]"
+        layout="horizontal">
+      </dx-radio-group>
+    </div>
+  </li>
+</ul>

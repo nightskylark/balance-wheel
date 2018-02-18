@@ -1,0 +1,50 @@
+{
+  "categories" : [ null, {
+    "color" : "#70c92f",
+    "description" : "",
+    "icon" : "like",
+    "name" : "Здоровье"
+  }, {
+    "color" : "#f8ca00",
+    "description" : "",
+    "name" : "Family"
+  }, {
+    "color" : "#db7028",
+    "description" : "",
+    "name" : "Recreation"
+  }, {
+    "color" : "#bd1550",
+    "description" : "",
+    "name" : "Workspace"
+  }, {
+    "color" : "#e97f02",
+    "description" : "",
+    "name" : "Personal growth"
+  }, {
+    "color" : "#9d419c",
+    "description" : "",
+    "name" : "Finance"
+  }, {
+    "color" : "#7e4452",
+    "description" : "",
+    "name" : "Romance"
+  }, {
+    "color" : "#9ab57e",
+    "description" : "",
+    "name" : "Friends"
+  }, {
+    "color" : "#36a3a6",
+    "description" : "",
+    "name" : "Career"
+  } ],
+  "checkPoints" : [ {
+    "date" : 1518364566868,
+    "values" : [ null, 8, 7, 6, 9, 10, 8, 6, 3, 9 ]
+  }, {
+    "date" : 1518364563868,
+    "values" : [ null, 8, 7, 6, 9, 10, 8, 6, 3, 9 ]
+  }, {
+    "date" : 1518364561868,
+    "values" : [ null, 8, 7, 6, 9, 10, 8, 6, 3, 9 ]
+  } ]
+}

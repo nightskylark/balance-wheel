@@ -1,7 +1,8 @@
 <dx-polar-chart
     [dataSource]="this.wheelData"
     (onInitialized)="onChartInit($event)"
-    palette="Bright">
+    palette="Bright"
+    resolveLabelOverlapping="shift">
     <dxo-common-series-settings
         type="bar"
         [ignoreEmptyPoints]="true">
@@ -14,7 +15,9 @@
     </dxo-legend>
     <dxo-argument-axis>
         <dxo-label
-            [customizeText]="getCategory">
+            [customizeText]="getCategory"
+            [visible]="true">
+            <dxo-font [size]="10"></dxo-font>
         </dxo-label>
     </dxo-argument-axis>
     <dxo-value-axis
@@ -27,6 +30,8 @@
         [text]="data.date | date">
     </dxo-title>
     <dxo-margin
-        [top]="20">
+        [top]="20"
+        [left]="0"
+        [right]="0">
     </dxo-margin>
 </dx-polar-chart>

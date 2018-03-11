@@ -4,7 +4,7 @@
 <h2>New checkpoint</h2>
 <ul>
   <li *ngFor="let category of categories | async">
-    <div *ngIf="category" class="material-card category-card" [style.border-left]="'10px solid ' + category.color">
+    <div *ngIf="category" class="material-card category-card" [style.border-top]="'4px solid ' + category.color">
       <div
         [class]="'category-icon dx-icon-' + (category.icon || 'tags')"
         [style.color]="category.color">

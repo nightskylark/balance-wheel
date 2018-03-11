@@ -1,6 +1,10 @@
+<p class="card-title">{{data.date | date}}</p>
+
 <dx-polar-chart
+    class="chart"
     [dataSource]="this.wheelData"
     (onInitialized)="onChartInit($event)"
+    (onDrawn)="onChartDrawn($event)"
     palette="Bright"
     resolveLabelOverlapping="shift">
     <dxo-common-series-settings
@@ -15,9 +19,7 @@
     </dxo-legend>
     <dxo-argument-axis>
         <dxo-label
-            [customizeText]="getCategory"
-            [visible]="true">
-            <dxo-font [size]="10"></dxo-font>
+            [visible]="false">
         </dxo-label>
     </dxo-argument-axis>
     <dxo-value-axis
@@ -26,11 +28,8 @@
         [max]="10"
         [axisDivisionFactor]="1">
     </dxo-value-axis>
-    <dxo-title 
-        [text]="data.date | date">
-    </dxo-title>
     <dxo-margin
-        [top]="20"
+        [top]="0"
         [left]="0"
         [right]="0">
     </dxo-margin>
